@@ -6,6 +6,8 @@
   "scripts": {
     "frontend": "cd frontend && yarn start",
     "backend": "cd backend && yarn start",
-    "start": "cd backend && yarn start && cd .. && cd frontend && yarn start"
+    "start": "node ./backend/index.js",
+    "build": "cd frontend && react-scripts build",
+    "start_react": "cd frontend && react-scripts start"
   }
 }
