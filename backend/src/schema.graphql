@@ -1,0 +1,44 @@
+type Card {
+  caseID: ID!
+  date: String!
+  name: String!
+  studentID: ID!
+  college: String!
+  department: String!
+  pickupLocation: String!
+  saveLocation: String!
+  pickupContact: String!
+  code:String!
+}
+
+type Query {
+  cards: [Card!]!
+}
+
+
+type Mutation {
+  
+  departments(department: String!):[Card!]!
+  colleges(college: String!):[Card!]!
+  grades(studentID: String!):[Card!]!
+  name(name:String!):[Card!]!
+
+  createCard(input: CreateCardInput!): Card
+  searchCard(studentID: ID!):Card
+  updateCard(studentID: ID!,code:String!): Card
+  sendCard(studentID: ID!):Card
+}
+
+input CreateCardInput {
+    caseID: ID!
+    date: String!
+    name: String!
+    studentID: ID!
+    college: String!
+    department: String!
+    pickupLocation: String!
+    saveLocation: String!
+    pickupContact: String!
+    code:String!
+}
+
