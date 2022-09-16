@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import cardInfo from './../Constants/cardInfo'
-import dateformat from 'dateformat'
 
 export default function SearchResult({  data , keyword}) {
 
@@ -42,7 +41,7 @@ export default function SearchResult({  data , keyword}) {
               {data.map((Case) => (
                 <tr key={Case.studentID}>
                   <td>{Case.caseID}</td>
-                  <td>{dateformat(Case.date, 'yyyy/mm/dd HH:MM')}</td>
+                  <td>{Case.date}</td>
                   <td>{Case.studentID}</td>
                   <td>{Case.name}</td>
                   <td>{Case.college}</td>

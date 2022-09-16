@@ -5,6 +5,6 @@
   "license": "MIT",
   "scripts": {
     "frontend": "cd frontend && yarn start",
-    "backend": "cd backend && yarn start",
+    "backend": "cd backend && yarn start"
   }
 }
